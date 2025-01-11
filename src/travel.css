@@ -1,0 +1,61 @@
+/* 
+Sepocatch ICP v5: Travel
+Stylesheet.
+*/
+
+.travel-text {
+    /* 垂直居中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 字体相关 */
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* 动效: 左右晃动 */
+    animation: text-shake 0.5s infinite;
+}
+
+.travel-text-subtitle {
+    /* 垂直居中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 字体相关 */
+    font-size: 5em;
+    color: red;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* 动效: 左右晃动 */
+    animation: text-shake 0.5s infinite;
+}
+
+@keyframes text-shake {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    15% {
+        transform: translate(-50%, -50%) rotate(3deg);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(-3deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(3deg);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(-3deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+}
+  
+
+footer {
+    margin-top: auto;
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
