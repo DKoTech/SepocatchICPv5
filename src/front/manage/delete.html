@@ -1,0 +1,30 @@
+<body style="background-color: black;" >
+    <main class="col-lg-8 mx-auto p-4 py-md-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 style="color: white;">Sepocatch 备案系统</h1>
+                <p style="color: white;">域名管理后台</p>
+                <p style="color: white;">确认删除</p>
+                <br>
+                <p style="color: white;">请在右边输入框输入您的备案域名来确定删除。不填写或填写错误视为放弃。</p>
+                <p style="color: white;">提示：删除不可逆！</p>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 450px; height: 250px;">
+                    <div class="card-body">
+                      <h5 class="card-title">删除确认</h5>
+                      <hr>
+                      <p class="card-text">
+                        <form action="/services/confirm-delete.php" method="get">
+                            <input type="text" class="form-control" id="name" name="domain" placeholder="输入域名点击继续来删除">
+                            <input type="text" name="sdomain" value="<?php echo $domain; ?>" hidden>
+                            <br>
+                            <button type="submit" class="btn btn-danger">确定删除</button>
+                        </form>
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

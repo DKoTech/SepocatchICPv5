@@ -1,0 +1,33 @@
+<body style="background-color: black;" >
+    <main class="col-lg-8 mx-auto p-4 py-md-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 style="color: white;">Sepocatch 备案系统</h1>
+                <p style="color: white;">ICP 经过了一代又一代的改换，最后到了这里。</p>
+                <p style="color: white;">没错，这就是新 V5。还是基于 Bootstrap。</p>
+                <br>
+                <p style="color: white;">点击上方 "加入" 来添加你的备案。</p>
+                <p style="color: white;">在备案之前请先注册。</p>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 450px; height: 250px;">
+                    <div class="card-body">
+                      <h5 class="card-title">搜索备案信息</h5>
+                      <hr>
+                      <p class="card-text">
+                        <?php if (isset($_GET["domain_not_found"])) {?>
+                            <div class="alert alert-danger">
+                                未找到该网站。
+                            </div>
+                        <?php } ?>
+                        <form class="d-flex" role="search" action="/services/result.php" method="get">
+                            <input class="form-control me-2" type="search" placeholder="搜索 ICP 备案号码或域名" aria-label="Search" name="keyword">
+                            <button class="btn btn-outline-success" type="submit">Find</button>
+                        </form>
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

@@ -1,0 +1,32 @@
+<body style="background-color: black;" >
+    <main class="col-lg-8 mx-auto p-4 py-md-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 style="color: white;">Sepocatch 备案系统</h1>
+                <p style="color: white;">域名管理后台</p>
+                <p style="color: white;">在右边菜单选择操作。</p>
+                <br>
+                <p style="color: white;">加入：加入一个备案</p>
+                <p style="color: white;">列表：列出您的备案记录 (修改 \ 删除)</p>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 450px; height: 250px;">
+                    <div class="card-body">
+                      <h5 class="card-title">菜单</h5>
+                      <div class="alert alert-success" role="alert" <?php echo $tips_hidden;?>>
+                        <?php echo $tips;?>
+                      </div>
+                      <hr>
+                      <p class="card-text">
+                        <button type="button" class="btn btn-info" onclick="javascript:window.location.href='/manage.php?action=add';">加入</button>
+                        <button type="button" class="btn btn-info" onclick="javascript:window.location.href='/manage.php?action=list';">列表</button>
+                        <?php if ($sepocatch_icp_username == "DKoTechnology") {?>
+                          <button type="button" class="btn btn-info" onclick="javascript:window.location.href='/manage.php?action=systemctl';">系统控制</button>
+                        <?php } ?>
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

@@ -1,0 +1,41 @@
+<body style="background-color: black;">
+    <main class="col-lg-8 mx-auto p-4 py-md-5 login-container">
+        <div class="row login-main">
+            <div class="card col-md-6 md-5" style="width: 400px;">
+                <div class="card-header">
+                    注册号码
+                </div>
+                <div class="card-body">
+                    <form action="/services/join.php" method="post">
+                        <!--
+                        保存以下数据：
+                        Name: 名称
+                        Domain: 域名
+                        Description: 介绍
+                        Creator: 创建者
+                        CreateTime: 创建时间
+                        Status: 当前状态
+                        IsTakingLink: 是否带有备案链接
+                        Number: 号码
+                        -->
+                        <div class="mb-3">
+                            <label for="number" class="form-label">名称</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="请输入名称">
+                        </div>
+                        <div class="mb-3">
+                            <label for="number" class="form-label">域名</label>
+                            <input type="text" class="form-control" id="domain" name="domain" placeholder="请输入域名">
+                        </div>
+                        <div class="mb-3">
+                            <label for="number" class="form-label">介绍</label>
+                            <input type="text" class="form-control" id="description" name="description" placeholder="请输入介绍">
+                        </div>
+                        <input type="text" class="form-control" id="creator" name="creator" placeholder="请输入创建者" value="<?php echo $sepocatch_icp_username;?>" hidden>
+                        <input type="text" class="form-control" id="number" name="number" value="<?php echo $number;?>" hidden>
+                        <button type="submit" class="btn btn-info">注册</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

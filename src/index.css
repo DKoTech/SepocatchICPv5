@@ -1,0 +1,52 @@
+body {
+    background: black;
+    background-color: black;
+    color: black;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.ol {
+    color: white ! important;
+    text-decoration: none ! important;
+    /* hover 时渐变为 skyblue */
+    transition: color 0.2s ease-in-out ! important;
+}
+
+.ol:hover {
+    color: skyblue ! important;
+    text-decoration: none ! important;
+}
+
+.color-black {
+    color: black;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.dropdown-item-sp {
+    color: black !important;
+    transition: color 0.2s ease-in-out !important;
+}
+
+.dropdown-item-sp:hover {
+    color: skyblue !important;
+    text-decoration: none !important;
+}

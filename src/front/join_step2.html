@@ -1,0 +1,33 @@
+<body style="background-color: black;">
+    <main class="col-lg-8 mx-auto p-4 py-md-5 login-container">
+        <div class="row">
+            <div class="col-md-6 md-5">
+                <?php
+                $dm = new DataManager();
+                $randoms = range(0001, 9999);
+                $randoms = array_map('strval', $randoms);
+                $numbers = array();
+                foreach ($randoms as $random) {
+                    if ($dm->checkAvalibleNumber($random)) {
+                        $numbers[] = "2024".$random;
+                    }
+                }
+                // 随机选号
+                $random_number = $numbers[array_rand($numbers)];
+                ?>
+                <h1 class='text-center' style="color: white;">随机号码结果</h1>
+                <h1 class='text-center' style="color: white;">您随机到的号码是：<?php echo $random_number;?></h1>
+            </div>
+
+            <div class="card col-md-6 md-5" style="width: 400px;">
+                <div class="card-header">
+                    继续
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-info" onclick="javascript:window.location.href='/join.php';">重抽 (重新开始)</button>
+                    <button class="btn btn-info" onclick="javascript:window.location.href='/join.php?page=2&number=<?php echo $random_number;?>';">下一步</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

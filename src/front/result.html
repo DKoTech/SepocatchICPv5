@@ -1,0 +1,48 @@
+<body style="background-color: black;" >
+    <main class="col-lg-8 mx-auto p-4 py-md-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 style="color: white;">Sepocatch 备案系统</h1>
+                <p style="color: white;">信息查询结果</p>
+                <p style="color: white;">右边就是信息了。</p>
+                <br>
+                <p style="color: white;">点击上方 "加入" 来添加你的备案。</p>
+                <p style="color: white;">在备案之前请先注册。</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group list-group-horizontal flex-fill" style="width: 900px;">
+                    <li class="list-group-item flex-fill">名称</li>
+                    <li class="list-group-item flex-fill">域名</li>
+                    <li class="list-group-item flex-fill">介绍</li>
+                    <li class="list-group-item flex-fill">号码</li>
+                    <li class="list-group-item flex-fill">所有人</li>
+                    <li class="list-group-item flex-fill">提交时间</li>
+                    <li class="list-group-item flex-fill">状态</li>
+                    <li class="list-group-item flex-fill">是否带有备案链接</li>
+                </ul>
+                <ul class="list-group list-group-horizontal-sm flex-fill" style="width: 900px;">
+                    <!--
+                    $name = $_COOKIE["SPCTHICP-Name"];
+                    $domain = $_COOKIE["SPCTHICP-Domain"];
+                    $description = $_COOKIE["SPCTHICP-Description"];
+                    $creator = $_COOKIE["SPCTHICP-Creator"];
+                    $createTime = $_COOKIE["SPCTHICP-CreateTime"];
+                    $status = $_COOKIE["SPCTHICP-Status"];
+                    $isTakingLink = $_COOKIE["SPCTHICP-IsTakingLink"];
+                    $number = $_COOKIE["SPCTHICP-Number"];
+
+                    阿伟，又在看 HTML 哦
+                    -->
+                    <li class="list-group-item"><?php echo $name;?></li>
+                    <li class="list-group-item"><?php echo $domain;?></li>
+                    <li class="list-group-item"><?php echo $description;?></li>
+                    <li class="list-group-item"><?php echo $number;?></li>
+                    <li class="list-group-item"><?php echo $creator;?></li>
+                    <li class="list-group-item"><?php echo $createTime;?></li>
+                    <li class="list-group-item"><?php echo $status;?></li>
+                    <li class="list-group-item"><?php echo $isTakingLink;?></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>

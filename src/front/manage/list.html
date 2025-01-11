@@ -1,0 +1,40 @@
+<body style="background-color: black;" >
+    <main class="col-lg-8 mx-auto p-4 py-md-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 style="color: white;">Sepocatch 备案系统</h1>
+                <p style="color: white;">域名管理后台</p>
+                <p style="color: white;">域名列表</p>
+                <br>
+                <p style="color: white;">删除：（危险操作）删除对应域名的备案</p>
+                <p style="color: white;">修改：修改一个对应域名的备案</p>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 450px;">
+                    <div class="card-body">
+                      <h5 class="card-title">列表</h5>
+                      <hr>
+                      <p class="card-text">
+                        <ul class="list-group">
+                            <?php
+                            $dm = new DataManager();
+                            $dm->setDataPath("./services/data/data.json");
+                            $domains = $dm->getAllRecordsByCreator($sepocatch_icp_username);
+                            if ($sepocatch_icp_username == "DKoTechnology") {
+                                printf($dm->$dataFile);
+                            }
+                            printf('<li class="list-group-item">用户 %s </li>', $sepocatch_icp_username);
+                            printf('<li class="list-group-item">共有 %d 个域名</li>', count($domains));
+                            // 遍历输出域名和操作
+                            foreach ($domains as $domain) {
+                                printf('<li class="list-group-item">' . $domain['Domain'] . ' <a href="manage.php?action=delete&domain=' . $domain['Domain'] . '">删除</a> <a href="manage.php?action=modify&domain=' . $domain['Domain'] . '&id='. $domain['Number'] .'">修改</a></li>'); 
+                            }
+                            ?>
+                        </ul>
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

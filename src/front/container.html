@@ -1,0 +1,36 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary color-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand ol" href="/index.php" style="color: white;">Sepocatch ICP v5</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link ol" aria-current="page" href="#" style="color: white;">首页</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ol" href="/join.php" style="color: white;">加入</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" style="margin-left: 27px;" action="/services/result.php" method="get">
+                <input class="form-control me-2" type="search" placeholder="搜索 ICP 备案号码或域名" aria-label="Search" name="keyword">
+                <button class="btn btn-outline-success" type="submit">Find</button>
+            </form>
+            <?php if ($logged_in) {?>
+                <li class="nav-item dropdown" style="margin-bottom: 27px;">
+                    <a class="nav-link dropdown-toggle ol" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <?php echo $sepocatch_icp_username;?>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item dropdown-item-sp" href="/manage.php">管理</a></li>
+                        <hr>
+                        <li><a class="dropdown-item dropdown-item-sp" href="/logout.php">登出</a></li>
+                    </ul>
+                </li>
+            <?php } ?>
+            <?php if (!$logged_in) { ?>
+                <a class="nav-link ol" href="/login.php" style="color: white;">登录</a>
+            <?php } ?>              
+          </div>
+        </div>
+    </nav>
+</div>

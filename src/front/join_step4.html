@@ -1,0 +1,24 @@
+<body style="background-color: black;" >
+    <main class="col-lg-8 mx-auto p-4 py-md-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 style="color: white;">Sepocatch 备案系统</h1>
+                <p style="color: white;">备案结束</p>
+                <p style="color: white;">请在 &lt;footer&gt; 中添加如下代码：</p>
+                <p style="color: white"><code>&lt;a href='https://icp.sepocatch.xyz/search.php?keyword=<?php echo $_GET['domain'];?>' id="SepocatchICPv5Link"&gt;SICP备<?php echo $_GET['number'];?>号&lt;/a&gt;</code></p>
+                <p style="color: white;">请务必携带 id 标签。否则您的网站将被判定为未悬挂标志。</p>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 450px; height: 250px;">
+                    <div class="card-body">
+                      <h5 class="card-title">完成</h5>
+                      <hr>
+                      <p class="card-text">
+                        <button type="button" class="btn btn-info" onclick="javascript:window.location.href='/index.php';">完成</button>
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
