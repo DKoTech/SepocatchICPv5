@@ -14,3 +14,8 @@ Then open 'src/front/header. html' and modify the comments above, but please kee
 Clear 'services/data/' and 'services/data_backups'.
 Copy the project to the website directory or modify the website directory.
 Open the homepage and register your super administrator account.
+
+## Announcement for everyone
+This version is deprecated.
+PLAESE WAIT FOR NEW VERSION.
+Thanks.
